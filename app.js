@@ -34,7 +34,7 @@ app.get('/register', (req, res) => { //แสดงหน้า เฉยๆ ไ
 app.post('/register', async (req, res) => { // เงื่อ นไขการสมัคร
   var body = req.body; //ดัีงข้อมูล จาก การสมัครทั้งหมด ไว้ๆ
   console.log(body)
-  const insertData =  await axios.post('http://localhost:8000/api/Users', body)
+  const insertData =  await axios.post('http://178.128.219.76:8000/api/Users', body)
   console.log(insertData)
   // alert(insertData);
   if (insertData) {
@@ -72,7 +72,7 @@ app.get('/arduino', (req, res) => {
 // })
 
 app.get('/Showtime', async (req, res) => {
-  const data = await axios.get("http://localhost:8000/api/Showtime/")
+  const data = await axios.get("http://178.128.219.76:8000/api/Showtime/")
   console.log("check_get_showtime")
   console.log(data)
   res.render('showdatabase.html',data);

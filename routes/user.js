@@ -37,7 +37,7 @@ router
   .route('/login')
   .post((req, res) => { //ต่อเนื่องมาจากหน้้า
     var body = req.body
-    const data =  axios.get("http://localhost:8000/api/Showtime/");
+    const data =  axios.get("http://178.128.219.76:8000/api/Showtime/");
     const sql = `SELECT username,password FROM User WHERE username='${body.username}' AND password='${body.password}'` //ดึงข้อมูล จากทั้ง user . password
     console.log(sql)
     doQuery(sql).then(resp => {
