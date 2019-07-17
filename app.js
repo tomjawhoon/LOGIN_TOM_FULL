@@ -72,7 +72,7 @@ app.get('/arduino', (req, res) => {
 // })
 
 app.get('/Showtime', async (req, res) => {
-  const data = await axios.get("http://178.128.219.76:8000/api/Showtime/")
+  const data = await axios.get('http://178.128.219.76:8000/api/Showtime/')
   console.log("check_get_showtime")
   console.log(data)
   res.render('showdatabase.html',data);
